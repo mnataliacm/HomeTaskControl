@@ -24,3 +24,37 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Personalizados por páginas*/
+.home {
+  color: #6A64FF;
+}
+
+.people {
+  color: #428CFF;
+}
+
+.task {
+  color: #2FDF75;
+}
+
+.assign {
+  color: #FF4961;
+}
+
+.list {
+  color: #FFD534;
+}
+
+.contact {
+  color: purple;
+}
+
+.about {
+  color: blue;
+}
+
+/*Añadidos por mi*/
+ion-title {
+  text-align: center;
+}

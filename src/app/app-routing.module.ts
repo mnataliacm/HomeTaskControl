@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'assign',
     loadChildren: () => import('./pages/assign/assign.module').then( m => m.AssignPageModule)
   },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+  },
 ];
 
 @NgModule({
