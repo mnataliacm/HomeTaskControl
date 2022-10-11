@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { People } from 'src/app/models/people';
+import { PeopleService } from 'src/app/services/people.service';
+import { LIST_OF_PEOPLE } from 'src/assets/data/list-of-people';
 import { HomePage } from '../home/home.page';
 
 @Component({
@@ -19,6 +22,6 @@ import { HomePage } from '../home/home.page';
 
 export class PeoplePage {
 
-  component = HomePage;
+  constructor(public peopleService: PeopleService) {}
 
 }
