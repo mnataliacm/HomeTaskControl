@@ -1,16 +1,27 @@
 <ion-header>
-  <ion-toolbar class="task">
+  <ion-toolbar class="task" color="dark">
     <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
+        <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <div id="nav-pages">
-    <ion-title>TASKS</ion-title>
-    </div>
+    <ion-title>MANAGER TASKS</ion-title>
+    </div> 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-title>Manager tasks</ion-title>
+  <ion-title>Manager Tasks</ion-title>
+  <!-- <ion-list>
+    <ion-item *ngFor="let people of peopleService.getPeople()">
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="{{ people.picture}}" />
+      </ion-avatar>
+      <ion-label>{{ people.name }}</ion-label>
+      <ion-title>{{ people.nickname }}</ion-title>
+      <ion-icon name="pencil" color="warning"></ion-icon>
+      <ion-icon name="close-circle" color="danger"></ion-icon>
+    </ion-item>
+  </ion-list> -->
 </ion-content>
 
 <ion-segment>
@@ -21,4 +32,3 @@
     <ion-icon name="add-circle" color="primary"></ion-icon>
   </ion-segment-button>
 </ion-segment>
-

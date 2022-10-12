@@ -7,13 +7,14 @@ import { People } from '../models/people';
 })
 export class PeopleService {
 
-  people: People[] = LIST_OF_PEOPLE;
-
   constructor() { }
 
-  getPeople(): People[] {
-    return this.people;
-  }
 
-  
+  people: People[] = LIST_OF_PEOPLE;
+ 
+
+  getPeople(): People[] {
+     return this.people;
+   }
+
 }
