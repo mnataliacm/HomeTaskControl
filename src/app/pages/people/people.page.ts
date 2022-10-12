@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { People } from 'src/app/models/people';
+import { LIST_OF_PEOPLE } from 'src/assets/data/list-of-people';
 import { HomePage } from '../home/home.page';
 
 @Component({
@@ -20,5 +22,7 @@ import { HomePage } from '../home/home.page';
 export class PeoplePage {
 
   component = HomePage;
+
+  listOfPeople: People[] = LIST_OF_PEOPLE;
 
 }
