@@ -12,7 +12,7 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col sizeXs="8" sizeXl="3" *ngFor="let people of listOfPeople">
+      <ion-col sizeXs="8" sizeXl="3" *ngFor="let people of peopleService.getPeople()">
         <ion-card>
           <ion-avatar>
           <img alt="Silhouette of a person's head" src="{{ people.picture}}">
@@ -33,7 +33,7 @@
   </ion-grid>
 
   <ion-list>
-    <ion-item *ngFor="let people of listOfPeople">
+    <ion-item *ngFor="let people of peopleService.getPeople()">
       <ion-avatar>
         <img alt="Silhouette of a person's head" src="{{ people.picture}}" />
       </ion-avatar>
