@@ -17,4 +17,7 @@ export class PeopleService {
      return this.people;
    }
 
+   deletePeople(id: number) {
+    this.people = this.people.filter(t => t.id != id);
+  }
 }

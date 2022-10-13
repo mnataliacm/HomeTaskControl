@@ -23,7 +23,7 @@
               <ion-button value="modify" slot="start" color="none">
                 <ion-icon name="pencil-outline" color="warning"></ion-icon>
               </ion-button>
-              <ion-button value="delete" slot="end" color="none" >
+              <ion-button value="delete" slot="end" color="none" (click)="peopleService.deletePeople(people.id)">
                 <ion-icon name="trash" color="danger"></ion-icon>
               </ion-button>
           </ion-card-content>
