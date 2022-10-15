@@ -10,25 +10,16 @@
 </ion-header>
 
 <ion-content>
-  <ion-title>Manager Tasks</ion-title>
-  <!-- <ion-list>
-    <ion-item *ngFor="let people of peopleService.getPeople()">
-      <ion-avatar>
-        <img alt="Silhouette of a person's head" src="{{ people.picture}}" />
-      </ion-avatar>
-      <ion-label>{{ people.name }}</ion-label>
-      <ion-title>{{ people.nickname }}</ion-title>
-      <ion-icon name="pencil" color="warning"></ion-icon>
-      <ion-icon name="close-circle" color="danger"></ion-icon>
-    </ion-item>
-  </ion-list> -->
+  <ion-list>
+    <app-task *ngFor="let task of getTasks()" [task]="task" (onEdit)="onEditTask($event)" (onDelete)="onDeleteTask($event)"></app-task>
+  </ion-list>
 </ion-content>
 
 <ion-segment>
   <ion-segment-button [routerDirection]="'root'" [routerLink]="'/home'" value="home">
     <ion-icon name="home" class="home"></ion-icon>
   </ion-segment-button>
-  <ion-segment-button value="insert">
+  <ion-segment-button (click)="onNewTask()" icon-only>
     <ion-icon name="add-circle" color="primary"></ion-icon>
   </ion-segment-button>
 </ion-segment>

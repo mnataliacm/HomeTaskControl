@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Task } from 'src/app/models/task';
+import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
   selector: 'app-task',
@@ -7,8 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  constructor() { }
+  @Output() onEdit = new EventEmitter;
+  @Output() onDelete = new EventEmitter;
+  @Input() task:Task;
+
+  constructor(
+    private tasksService:TasksService
+  ){
+
+  }
 
   ngOnInit() {}
+
+  onEditClick(){
+    this.onEdit.emit(this.task);
+  }
+
+  onDeleteClick(){
+    this.onDelete.emit(this.task);
+  }
+
 
 }
