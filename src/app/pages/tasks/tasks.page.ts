@@ -58,7 +58,7 @@ export class TasksPage implements OnInit {
 
   async onDeleteAlert(task){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar a la persona?',
+      header: '¿Está seguro de que quiere borrar a la tarea?',
       buttons: [
         {
           text: 'Cancelar',

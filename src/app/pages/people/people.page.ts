@@ -58,7 +58,7 @@ export class PeoplePage implements OnInit{
 
   async onDeleteAlert(person){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que desear borrar a la persona?',
+      header: '¿Está seguro de que desea borrar a la persona?',
       buttons: [
         {
           text: 'Cancelar',
