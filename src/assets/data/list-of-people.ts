@@ -4,7 +4,7 @@ export const LIST_OF_PEOPLE: Person[] = [
   {
     id: 0,
     name: 'Natalia',
-    surname: 'Castillo',
+    surname: 'Castillo Muñoz',
     nickname: 'Natalia',
     picture: "https://ionicframework.com/docs/img/demos/avatar.svg"
   },
