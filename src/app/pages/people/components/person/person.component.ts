@@ -13,16 +13,9 @@ export class PersonComponent implements OnInit {
   @Output() onDelete = new EventEmitter;
   @Input() person:Person;
   
-  constructor(
-    private peopleService:PeopleService
-  ){
+  constructor(){ }
 
-  }
-
-  ngOnInit(
-  ) {
-
-  }
+  ngOnInit() { }
 
   onEditClick(){
     this.onEdit.emit(this.person);

@@ -13,7 +13,7 @@ import { PersonDetailComponent } from './components/person-detail/person-detail.
 export class PeoplePage implements OnInit{
 
   constructor(
-    public peopleService: PeopleService,
+    private peopleService: PeopleService,
     private modal:ModalController,
     private alert:AlertController
     ) {}
