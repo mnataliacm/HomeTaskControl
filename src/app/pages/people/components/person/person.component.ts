@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { ToastController } from '@ionic/angular';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { Person } from 'src/app/models/person';
 
 @Component({
@@ -7,13 +6,11 @@ import { Person } from 'src/app/models/person';
   templateUrl: './person.component.html',
   styleUrls: ['./person.component.scss'],
 })
-export class PersonComponent implements OnInit {
+export class PersonComponent {
 
   @Output() onEdit = new EventEmitter;
   @Output() onDelete = new EventEmitter;
   @Input() person:Person;
-
-  ngOnInit() { }
 
   onEditClick(){
     this.onEdit.emit(this.person);
@@ -34,8 +31,5 @@ export class PersonComponent implements OnInit {
 
   onDismiss(result){
     this.popover.dismiss(null, 'cancel');
-  }
-
-  
-  
+  } 
 }

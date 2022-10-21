@@ -4,20 +4,28 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <div id="nav-pages">
-    <ion-title>ASSIGN</ion-title>
+    <ion-title>TASKS ASSIGNMENT</ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-title>Assign tasks</ion-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeXs="8" sizeXl="3" *ngFor="let assign of getAssignment()">
+  <app-assignment [assign]="assign" 
+    (onEdit)="onEditAssign($event)"
+    (onDelete)="onDeleteAssign($event)"></app-assignment>
+  </ion-col>
+</ion-row>
+</ion-grid>
 </ion-content>
 
 <ion-segment>
   <ion-segment-button [routerDirection]="'root'" [routerLink]="'/home'" value="home">
     <ion-icon name="home" class="home"></ion-icon>
   </ion-segment-button>
-  <ion-segment-button value="insert">
-    <ion-icon name="add-circle" color="primary"></ion-icon>
+  <ion-segment-button (click)="onNewAssign()" icon-only>
+    <ion-icon name="add-circle" color="primary" style="zoom:2"></ion-icon>
   </ion-segment-button>
 </ion-segment>

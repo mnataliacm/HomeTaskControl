@@ -9,7 +9,7 @@ export class PeopleService {
 
   constructor() { }
 
-  _people: Person[] = LIST_OF_PEOPLE;
+  private _people: Person[] = LIST_OF_PEOPLE;
 
   id: number = this._people.length + 1;
 

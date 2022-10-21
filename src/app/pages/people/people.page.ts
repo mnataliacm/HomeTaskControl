@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Person } from 'src/app/models/person';
 import { PeopleService } from 'src/app/services/people.service';
@@ -10,16 +10,14 @@ import { PersonDetailComponent } from './components/person-detail/person-detail.
   styleUrls: ['./people.page.scss'],
 })
 
-export class PeoplePage implements OnInit{
+export class PeoplePage {
 
   constructor(
     private peopleService: PeopleService,
     private modal:ModalController,
     private alert:AlertController
     ) {}
-
-  ngOnInit() { }
-  
+ 
   getPeople(){
     return this.peopleService.getPeople();
   }

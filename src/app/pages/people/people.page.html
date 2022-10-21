@@ -22,7 +22,7 @@
 </ion-content>
 
 <ion-segment>
-  <ion-segment-button [routerLink]="'/home'" value="home">
+  <ion-segment-button [routerDirection]="'root'" [routerLink]="'/home'" value="home">
     <ion-icon name="home" class="home"></ion-icon>
   </ion-segment-button>
   <ion-segment-button (click)="onNewPerson()" icon-only>
