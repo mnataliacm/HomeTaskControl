@@ -16,7 +16,7 @@ import { TaskDetailComponent } from './components/task-detail/task-detail.compon
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    TasksPageRoutingModule
+    TasksPageRoutingModule,
   ],
   declarations: [TasksPage, TaskComponent, TaskDetailComponent]
 })

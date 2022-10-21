@@ -4,6 +4,10 @@
     <img *ngIf="task.picture" alt="Task picture" [src]="task.picture" />
   </ion-avatar>
   <ion-label>{{task.name}} <br> ({{task.time}} min)</ion-label>
+  <ion-icon name="swap-horizontal"></ion-icon>
+</ion-item>
+
+<ion-item-options class="ion-padding">
   <ion-button icon-only fill="clear" color="success" (click)="onEditClick()"><ion-icon name="pencil-outline" ></ion-icon></ion-button>
   <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon name="trash-outline" ></ion-icon></ion-button>
-</ion-item>
+</ion-item-options>

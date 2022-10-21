@@ -10,8 +10,10 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <app-task *ngFor="let task of getTasks()" [task]="task" (onEdit)="onEditTask($event)" (onDelete)="onDeleteTask($event)"></app-task>
+  <ion-list>   
+    <ion-item-sliding *ngFor="let task of getTasks()">
+       <app-task  [task]="task" (onEdit)="onEditTask($event)" (onDelete)="onDeleteTask($event)"></app-task>
+    </ion-item-sliding>  
   </ion-list>
 </ion-content>
 
