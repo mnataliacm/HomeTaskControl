@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'assign',
-    loadChildren: () => import('./pages/assign/assign.module').then( m => m.AssignPageModule)
+    loadChildren: () => import('./pages/assignments/assignments.module').then( m => m.AssignmentsPageModule)
   },
   {
     path: 'list',

@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-assign',
-  templateUrl: './assign.page.html',
-  styleUrls: ['./assign.page.scss'],
+  templateUrl: './assignments.page.html',
+  styleUrls: ['./assignments.page.scss'],
 })
-export class AssignPage implements OnInit {
+export class AssignmentsPage implements OnInit {
 
   constructor() { }
 

@@ -12,7 +12,7 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col sizeXs="8" sizeXl="2" *ngFor="let person of getPeople()">
+      <ion-col sizeXs="8" sizeXl="3" *ngFor="let person of getPeople()">
   <app-person [person]="person" 
     (onEdit)="onEditPerson($event)"
     (onDelete)="onDeletePerson($event)"></app-person>
