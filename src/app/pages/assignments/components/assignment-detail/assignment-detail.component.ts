@@ -1,20 +1,26 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Assign } from 'src/app/models/assign';
+import { Person } from 'src/app/models/person';
+import { AssignmentService } from 'src/app/services/assignment.service';
+import { PeopleService } from 'src/app/services/people.service';
+import { TasksService } from 'src/app/services/tasks.service';
 
 @Component({
   selector: 'app-assignment-detail',
   templateUrl: './assignment-detail.component.html',
   styleUrls: ['./assignment-detail.component.scss'],
 })
-export class AssignmentDetailComponent {
+export class AssignmentDetailComponent implements OnInit {
 
-  form:FormGroup;
-  mode:"New" | "Edit" = "New";
+  form: FormGroup;
+  mode: "New" | "Edit" = "New";
+  _personID: undefined;
+  
 
-  @Input('person') set assign(assign:Assign){
-    if(assign){
+  @Input('assign') set assign(assign: Assign) {
+    if (assign) {
       this.form.controls.id.setValue(assign.id);
       this.form.controls.personId.setValue(assign.personId);
       this.form.controls.taskId.setValue(assign.taskId);
@@ -23,30 +29,46 @@ export class AssignmentDetailComponent {
       this.mode = "Edit";
     }
   }
-  
+
   constructor(
-    private fb:FormBuilder,
-    private modal:ModalController
-  ) { 
+    private peopleService: PeopleService,
+    private tasksService: TasksService,
+    private assignService: AssignmentService,
+    private fb: FormBuilder,
+    private modal: ModalController,
+
+  ) {
     this.form = this.fb.group({
-      id:[null],personId:['', [Validators.required]],
-      taskId:['', [Validators.required]],
-      createdAt:['', [Validators.required]],
-      dateTime:['', [Validators.required]]
+      id: [null],
+      personId: [, []],
+      taskId: [-1, []],
+      createdAt: ['', []],
+      dateTime: ['', []]
     });
   }
 
   ngOnInit() {
-
   }
 
-  onSubmit(){
-    
-    this.modal.dismiss({assign: this.form.value, mode:this.mode}, 'ok');
+  onSubmit() {
+    this.modal.dismiss({ assign: this.form.value, mode: this.mode }, 'ok');
   }
 
-  onDismiss(result){
+  onDismiss(result) {
     this.modal.dismiss(null, 'cancel');
+  }
+
+  onChangeDateTime(dateTime) {
+    this.form.controls.dateTime.setValue(dateTime);
+  }
+
+  /* Seleccionar personas */
+  people = this.peopleService.getPeople();
+  tasks = this.tasksService.getTasks();
+
+  handleChange(e) {
+    //this.pushLog('ionChange fired with value: ' + e.detail.value);
+    this._personID = e.detail.value;
   }
 
 }

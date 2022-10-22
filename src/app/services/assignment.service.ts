@@ -1,30 +1,28 @@
+import * as moment from 'moment-timezone';
 import { Injectable } from '@angular/core';
 import { Assign } from '../models/assign';
-import { Person } from '../models/person';
-import { Task } from '../models/task';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AssignmentService {
 
-  constructor() { }
-
+  momentjs:any = moment;
   private _assign: Assign[] = [
     {
       id: 1,
       personId: 3,
       taskId: 3,
-      createdAt: "15/01/2023",
-      dateTime: "18:00:00",
+      createdAt: this.momentjs().toISOString(),
+      dateTime: this.momentjs().add(1, 'days').toISOString(),
 
     },
     {
       id: 2,
       personId: 4,
       taskId: 1,
-      createdAt: "15/01/2023",
-      dateTime: "18:30:00",
+      createdAt:this.momentjs().toISOString(),
+      dateTime:this.momentjs().add(1, 'days').toISOString(),
     }
   ]
 
@@ -34,8 +32,12 @@ export class AssignmentService {
     return this._assign;
   }
 
-  getAssignmentById(id: number) {
-    return this._assign.find(p => p.id == id);
+  getAssignmentByPersonId(personId: number): Assign[] {
+    return this._assign.filter(p => p.personId == personId);
+  }
+
+  getAssignmentByTaskId(taskId: number): Assign[] {
+    return this._assign.filter(p => p.taskId == taskId);
   }
 
   deleteAssignmentById(id: number) {
@@ -56,5 +58,4 @@ export class AssignmentService {
       _assign.dateTime = assign.dateTime;
     }
   }
-
 }

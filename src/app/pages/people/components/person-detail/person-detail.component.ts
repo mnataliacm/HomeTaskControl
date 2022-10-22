@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Person } from 'src/app/models/person';
@@ -9,7 +9,7 @@ import { Person } from 'src/app/models/person';
   styleUrls: ['./person-detail.component.scss'],
 })
 
-export class PersonDetailComponent implements OnInit {
+export class PersonDetailComponent {
 
   form:FormGroup;
   mode:"New" | "Edit" = "New";
@@ -38,12 +38,7 @@ export class PersonDetailComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-
-  }
-
-  onSubmit(){
-    
+  onSubmit(){   
     this.modal.dismiss({person: this.form.value, mode:this.mode}, 'ok');
   }
 

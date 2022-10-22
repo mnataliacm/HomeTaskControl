@@ -14,7 +14,7 @@ export class AssignmentsPage {
   constructor(
     private assignService: AssignmentService,
     private modal: ModalController,
-    private alert:AlertController
+    private alert:AlertController,
   ) { }
 
   getAssignment(){
@@ -25,7 +25,7 @@ export class AssignmentsPage {
     const modal = await this.modal.create({
       component:AssignmentDetailComponent,
       componentProps:{
-        assign:assign
+        assign:assign //cambio assign: assign por person:assign
       }
     });
     
