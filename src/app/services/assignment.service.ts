@@ -28,8 +28,12 @@ export class AssignmentService {
 
   id: number = this._assign.length + 1;
 
-  getAssignment(): Assign[] {
+  getAssignment() {
     return this._assign;
+  }
+
+  getAssignmentById(id:number){
+    return this._assign.find(a=>a.id==id);
   }
 
   getAssignmentByPersonId(personId: number): Assign[] {

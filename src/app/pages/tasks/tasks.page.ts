@@ -9,16 +9,13 @@ import { TaskDetailComponent } from './components/task-detail/task-detail.compon
   templateUrl: './tasks.page.html',
   styleUrls: ['./tasks.page.scss'],
 })
-export class TasksPage implements OnInit {
+export class TasksPage {
 
   constructor(
     public tasksService: TasksService,
     private modal: ModalController,
     private alert: AlertController
   ) { }
-
-  ngOnInit() {
-  }
 
   getTasks(){
     return this.tasksService.getTasks();

@@ -11,15 +11,13 @@
   <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
 
     <ion-item>
-      <ion-select placeholder="Select a person ..." okText="Ok" cancelText="Cancel" (ionChange)="handleChange($event)"
-        formControlName="personId">
+      <ion-select placeholder="Select a person ..." okText="Ok" cancelText="Cancel" formControlName="personId">
         <ion-select-option *ngFor="let person of people" value="{{person.id}}">{{ person.name }}</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
-      <ion-select placeholder="Select a task ..." okText="Ok" cancelText="Cancel" (ionChange)="handleChange($event)"
-        formControlName="taskId">
+      <ion-select placeholder="Select a task ..." okText="Ok" cancelText="Cancel" formControlName="taskId">
         <ion-select-option *ngFor="let task of tasks" value="{{task.id}}">{{ task.name }}</ion-select-option>
       </ion-select>
     </ion-item>
@@ -37,37 +35,3 @@
     <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
   </form>
 </ion-content>
-
-<!--  
-<ion-content class="ion-padding">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()" (keyup.enter)="onSubmit()">
-    <ion-item>
-      <ion-label position="floating">
-        Selecciona la persona
-      </ion-label>
-      <ion-input type="text" placeholder="Selecciona persona" formControlName="personId"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">
-        Selecciona la tarea
-      </ion-label>
-      <ion-input type="text" placeholder="Selecciona tarea" formControlName="taskId"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">
-        Selecciona la fecha
-      </ion-label>
-      <ion-input type="text" placeholder="Introduce fecha" formControlName="createdAt"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">
-        Selecciona la hora de comienzo
-      </ion-label>
-      <ion-input type="text" placeholder="Introduce hora" formControlName="dateTime"></ion-input>
-    </ion-item>
-    <ion-title>
-      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
-    </ion-title> 
-  </form>
-</ion-content>
--->

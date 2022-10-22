@@ -20,5 +20,4 @@ export class TaskComponent {
     this.onDelete.emit(this.task);
   }
 
-
 }

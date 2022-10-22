@@ -24,9 +24,7 @@ export class AssignmentComponent {
     private peopleService: PeopleService,
     private tasksService: TasksService,
     private assignService: AssignmentService
-  ) {
-
-  }
+  ) {}
 
   getTask():Task{
     console.log(new Date().toISOString());
@@ -53,39 +51,5 @@ export class AssignmentComponent {
     slide.close();
     this.onDelete.emit(this.assign);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-  /*
-  onEditClick(){
-    this.onEdit.emit(this.assign);
-  }
-
-  onDeleteClick(){
-    this.onDelete.emit(this.assign);
-  }
-
-  @ViewChild('popover') popover;
-
-  isOpen = false;
-
-  presentPopover(e:Event) {
-    this.popover.Event = e
-    this.isOpen = true;
-  }
-
-  onDismiss(result){
-    this.popover.dismiss(null, 'cancel');
-  }
-*/
   
 }

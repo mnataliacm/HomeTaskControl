@@ -8,7 +8,7 @@ import { Task } from 'src/app/models/task';
   templateUrl: './task-detail.component.html',
   styleUrls: ['./task-detail.component.scss'],
 })
-export class TaskDetailComponent implements OnInit {
+export class TaskDetailComponent {
 
   form:FormGroup;
   mode:"New" | "Edit" = "New";
@@ -35,12 +35,7 @@ export class TaskDetailComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-
-  }
-
-  onSubmit(){
-    
+  onSubmit(){   
     this.modal.dismiss({task: this.form.value, mode:this.mode}, 'ok');
   }
 

@@ -31,5 +31,6 @@ export class PersonComponent {
 
   onDismiss(result){
     this.popover.dismiss(null, 'cancel');
-  } 
+  }
+   
 }

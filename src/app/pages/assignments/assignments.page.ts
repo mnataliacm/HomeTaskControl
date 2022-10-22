@@ -81,4 +81,5 @@ export class AssignmentsPage {
   onDeleteAssign(assign){
    this.onDeleteAlert(assign);    
   }
+  
 }
