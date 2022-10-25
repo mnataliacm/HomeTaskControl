@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
-import { Task } from 'src/app/models/task';
-import { TasksService } from 'src/app/services/tasks.service';
-import { TaskDetailComponent } from './components/task-detail/task-detail.component';
+import { Task } from 'src/app/core/models/task';
+import { TasksService } from 'src/app/core/services/tasks.service';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 @Component({
   selector: 'app-tasks',

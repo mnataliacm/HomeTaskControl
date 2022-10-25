@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IonItemSliding } from '@ionic/angular';
-import { Assign } from 'src/app/models/assign';
-import { Person } from 'src/app/models/person';
-import { Task } from 'src/app/models/task';
-import { AssignmentService } from 'src/app/services/assignment.service';
-import { PeopleService } from 'src/app/services/people.service';
-import { TasksService } from 'src/app/services/tasks.service';
+import { Assign } from 'src/app/core/models/assign';
+import { Person } from 'src/app/core/models/person';
+import { Task } from 'src/app/core/models/task';
+import { AssignmentService } from 'src/app/core/services/assignments.service';
+import { PeopleService } from 'src/app/core/services/people.service';
+import { TasksService } from 'src/app/core/services/tasks.service';
 import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 
 @Component({

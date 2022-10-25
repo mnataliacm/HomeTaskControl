@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { Person } from 'src/app/models/person';
+import { Person } from 'src/app/core/models/person';
 
 @Component({
   selector: 'app-person',
