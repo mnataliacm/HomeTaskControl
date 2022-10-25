@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { IonItemSliding } from '@ionic/angular';
 import { Task } from 'src/app/core/models/task';
+import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 
 @Component({
   selector: 'app-task',
@@ -11,12 +13,15 @@ export class TaskComponent {
   @Output() onEdit = new EventEmitter;
   @Output() onDelete = new EventEmitter;
   @Input() task:Task;
+  isLowResolution = lowres;
 
-  onEditClick(){
+  onEditClick(slide:IonItemSliding){
+    slide.close();
     this.onEdit.emit(this.task);
   }
 
-  onDeleteClick(){
+  onDeleteClick(slide:IonItemSliding){
+    slide.close();
     this.onDelete.emit(this.task);
   }
 

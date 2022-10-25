@@ -1,13 +1,35 @@
-<ion-item>
-  <ion-avatar>
-    <img *ngIf="!task.picture" alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
-    <img *ngIf="task.picture" alt="Task picture" [src]="task.picture" />
-  </ion-avatar>
-  <ion-label>{{task.name}} <br> ({{task.time}} min)</ion-label>
-  <ion-icon name="swap-horizontal"></ion-icon>
-</ion-item>
+<ion-item-sliding #sliding [disabled]="!isLowResolution()">
+  <ion-item>
+    <ion-avatar>
+      <img *ngIf="!task.picture" alt="Silhouette of mountains"
+        src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+      <img *ngIf="task.picture" alt="Task picture" [src]="task.picture" />
+    </ion-avatar>
+    <ion-label>{{task.name}} <br> ({{task.time}} min)</ion-label>
 
-<ion-item-options class="ion-padding">
-  <ion-button icon-only fill="clear" color="success" (click)="onEditClick()"><ion-icon name="pencil-outline" ></ion-icon></ion-button>
-  <ion-button icon-only fill="clear" color="danger" (click)="onDeleteClick()"><ion-icon name="trash-outline" ></ion-icon></ion-button>
-</ion-item-options>
+    <ion-icon name="swap-horizontal" *ngIf="isLowResolution()"></ion-icon>
+    <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" fill="clear" (click)="onEditClick(sliding)">
+      <div class="vertical">
+        <ion-icon name="pencil"></ion-icon>
+        {{'Editar' | uppercase}}
+      </div>
+    </ion-button>
+
+    <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" fill="clear" color="danger"
+      (click)="onDeleteClick(sliding)">
+      <div class="vertical">
+        <ion-icon name="trash"></ion-icon>
+        {{'Borrar' | uppercase}}
+      </div>
+    </ion-button>
+  </ion-item>
+
+  <ion-item-options>
+    <ion-item-option (click)="onEditClick(sliding)" color="light">
+      <ion-icon slot="top" name="pencil-outline" color="success"></ion-icon>
+    </ion-item-option>
+    <ion-item-option (click)="onDeleteClick(sliding)" color="light">
+      <ion-icon slot="top" name="trash-outline" color="danger"></ion-icon>
+    </ion-item-option>
+  </ion-item-options>
+</ion-item-sliding>
