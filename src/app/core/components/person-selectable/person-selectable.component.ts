@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IonAccordionGroup } from '@ionic/angular';
+import { PeopleService, Person } from '../..';
+
 
 @Component({
   selector: 'app-person-selectable',
@@ -7,8 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonSelectableComponent implements OnInit {
 
-  constructor() { }
+  selectedPerson: Person = null;
+  constructor(
+    private peopleService: PeopleService
+  ) { }
 
   ngOnInit() {}
 
+  getPeople() {
+    return this.peopleService.getPeople();
+  }
+
+  onPersonClicked(person:Person, accordion:IonAccordionGroup){
+    this.selectedPerson = person;
+    accordion.value = '';
+  }
+  
 }

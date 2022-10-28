@@ -4,13 +4,12 @@ import { PeoplePageRoutingModule } from './people-routing.module';
 
 import { PeoplePage } from './people.page';
 import { CoreModule } from '../../core/core.module';
-import { PersonDetailComponent } from 'src/app/core';
 
 @NgModule({
   imports: [
     CoreModule,
     PeoplePageRoutingModule
   ],
-  declarations: [PeoplePage, PersonDetailComponent, PersonDetailComponent]
+  declarations: [PeoplePage]
 })
 export class PeoplePageModule {}
