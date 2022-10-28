@@ -1,4 +1,4 @@
-import { Person } from "src/app/core/models/person";
+import { Person } from "src/app/core/models/person.model";
 
 export const LIST_OF_PEOPLE: Person[] = [
   {

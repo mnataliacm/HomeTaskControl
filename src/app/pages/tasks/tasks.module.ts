@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 
 import { TasksPageRoutingModule } from './tasks-routing.module';
 
-import { TasksPage } from './tasks.page';
-import { TaskComponent } from '../../core/components/task/task.component';
-import { TaskDetailComponent } from '../../core/components/task-detail/task-detail.component';
 import { CoreModule } from 'src/app/core/core.module';
+import { TasksPage } from './tasks.page';
+import { TaskComponent, TaskDetailComponent } from 'src/app/core';
 
 @NgModule({
   imports: [

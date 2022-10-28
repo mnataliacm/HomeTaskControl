@@ -1,6 +1,7 @@
 import * as moment from 'moment-timezone';
 import { Injectable } from '@angular/core';
-import { Assign } from '../models/assign';
+import { Assign } from '..';
+import { LIST_OF_ASSIGNMENTS } from 'src/assets/data/list-of-assignments';
 
 @Injectable({
   providedIn: 'root'
@@ -8,41 +9,7 @@ import { Assign } from '../models/assign';
 export class AssignmentService {
 
   momentjs:any = moment;
-  private _assign: Assign[] = [
-    {
-      id: 1,
-      personId: 3,
-      taskId: 3,
-      createdAt: this.momentjs().toISOString(),
-      dateTime: this.momentjs().add(1, 'days').toISOString(),
-
-    },
-    {
-      id: 2,
-      personId: 4,
-      taskId: 4,
-      createdAt:this.momentjs().toISOString(),
-      dateTime:this.momentjs().add(1, 'days').toISOString(),
-    },
-    {
-      id: 3,
-      personId: 2,
-      taskId: 2,
-      createdAt:this.momentjs().toISOString(),
-      dateTime:this.momentjs('2023-02-12T00:00:00+01:00'),
-    },
-    {
-      id: 4,
-      personId: 1,
-      taskId: 1,
-      createdAt:this.momentjs().toISOString(),
-      dateTime:this.momentjs('2016-01-01T15:00:00+01:00').toISOString(),
-    }
-  ]
-  /*
-  2023-01-01T00:00:00+01:00
-  ISO 8601 YYYY-MM-DDTHH:mm:ss+HH:MM
-  */
+  private _assign: Assign[] = LIST_OF_ASSIGNMENTS;
 
   id: number = this._assign.length + 1;
 

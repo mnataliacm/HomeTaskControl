@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 
 import { AssignPageRoutingModule } from './assignments-routing.module';
 
+import { CoreModule } from '../../core/core.module';
 import { AssignmentsPage } from './assignments.page';
-import { AssignmentComponent } from '../../core/components/assignment/assignment.component';
-import { AssignmentDetailComponent } from 'src/app/core/components/assignment-detail/assignment-detail.component';
-import { CoreModule } from 'src/app/core/core.module';
+import { AssignmentComponent, AssignmentDetailComponent } from '../../core';
+
 
 @NgModule({
   imports: [

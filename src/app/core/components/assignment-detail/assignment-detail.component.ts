@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
-import { Assign } from 'src/app/core/models/assign';
+import { Assign } from 'src/app/core/models/assign.model';
 import { AssignmentService } from 'src/app/core/services/assignments.service';
 import { PeopleService } from 'src/app/core/services/people.service';
 import { TasksService } from 'src/app/core/services/tasks.service';

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IonItemSliding } from '@ionic/angular';
-import { Task } from 'src/app/core/models/task';
+import { Task } from 'src/app/core/models/task.model';
 import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 
 @Component({
