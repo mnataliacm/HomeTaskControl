@@ -2,7 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IonItemSliding } from '@ionic/angular';
 
 import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
-import { Assign, PeopleService, TasksService, AssignmentService, Task, Person } from '../..';
+import { Assign, PeopleService, TasksService, Task, Person } from '../..';
 
 @Component({
   selector: 'app-assignment',
@@ -19,7 +19,6 @@ export class AssignmentComponent {
   constructor(
     private peopleService: PeopleService,
     private tasksService: TasksService,
-    private assignService: AssignmentService
   ) {}
 
   getTask():Task{
@@ -47,5 +46,5 @@ export class AssignmentComponent {
     slide.close();
     this.onDelete.emit(this.assign);
   }
-  
+
 }

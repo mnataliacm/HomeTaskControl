@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Assign, PeopleService, TasksService, AssignmentService } from '../..';
@@ -14,7 +14,6 @@ export class AssignmentDetailComponent {
   mode: "New" | "Edit" = "New";
   people = this.peopleService.getPeople();
   tasks = this.tasksService.getTasks();
-  
 
   @Input('assign') set assign(assign: Assign) {
     if (assign) {
@@ -29,7 +28,7 @@ export class AssignmentDetailComponent {
   constructor(
     private peopleService: PeopleService,
     private tasksService: TasksService,
-    private assignService: AssignmentService,
+    private assignmentsService: AssignmentService,
     private fb: FormBuilder,
     private modal: ModalController,
 

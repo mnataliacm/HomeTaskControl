@@ -2,7 +2,7 @@ import { Person } from "src/app/core/models/person.model";
 
 export const LIST_OF_PEOPLE: Person[] = [
   {
-    id: 0,
+    id: 1,
     name: 'Natalia',
     surname: 'Castillo Muñoz',
     nickname: 'Natalia',
