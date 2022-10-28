@@ -4,7 +4,7 @@ import { AssignPageRoutingModule } from './assignments-routing.module';
 
 import { AssignmentsPage } from './assignments.page';
 import { AssignmentComponent } from '../../core/components/assignment/assignment.component';
-import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
+import { AssignmentDetailComponent } from 'src/app/core/components/assignment-detail/assignment-detail.component';
 import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({

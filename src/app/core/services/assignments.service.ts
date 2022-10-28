@@ -36,7 +36,7 @@ export class AssignmentService {
       personId: 1,
       taskId: 1,
       createdAt:this.momentjs().toISOString(),
-      dateTime:moment('2016-01-01T15:00:00+01:00').toISOString(),
+      dateTime:this.momentjs('2016-01-01T15:00:00+01:00').toISOString(),
     }
   ]
   /*

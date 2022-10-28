@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Person } from 'src/app/core/models/person';
 import { PeopleService } from 'src/app/core/services/people.service';
-import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { PersonDetailComponent } from '../../core/components/person-detail/person-detail.component';
 
 @Component({
   selector: 'app-people',

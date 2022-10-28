@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Assign } from 'src/app/core/models/assign';
 import { AssignmentService } from 'src/app/core/services/assignments.service';
-import { AssignmentDetailComponent } from './assignment-detail/assignment-detail.component';
+import { AssignmentDetailComponent } from 'src/app/core/components/assignment-detail/assignment-detail.component';
 
 @Component({
   selector: 'app-assign',

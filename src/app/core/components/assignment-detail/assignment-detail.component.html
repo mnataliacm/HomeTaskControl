@@ -12,13 +12,13 @@
 
     <ion-item>
       <ion-select placeholder="Select a person ..." okText="Ok" cancelText="Cancel" formControlName="personId">
-        <ion-select-option *ngFor="let person of people" value="{{person.id}}">{{ person.name }}</ion-select-option>
+        <ion-select-option *ngFor="let person of people" [value]="person.id">{{ person.name }}</ion-select-option>
       </ion-select>
     </ion-item>
 
     <ion-item>
       <ion-select placeholder="Select a task ..." okText="Ok" cancelText="Cancel" formControlName="taskId">
-        <ion-select-option *ngFor="let task of tasks" value="{{task.id}}">{{ task.name }}</ion-select-option>
+        <ion-select-option *ngFor="let task of tasks" [value]="task.id"> {{task.name}} </ion-select-option>
       </ion-select>
     </ion-item>
 
@@ -28,7 +28,7 @@
 
     <ion-modal [keepContentsMounted]="true">
       <ng-template>
-        <ion-datetime doneText="Aceptar" cancelText="Cancelar" showDefaultButtons="true" name="dateTime" id="datetime">
+        <ion-datetime doneText="Aceptar" cancelText="Cancelar" showDefaultButtons="true" name="dateTime" id="datetime" (ionChange)="onChangeDateTime($event)">
         </ion-datetime>
       </ng-template>
     </ion-modal>

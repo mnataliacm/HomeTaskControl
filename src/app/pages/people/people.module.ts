@@ -4,7 +4,7 @@ import { PeoplePageRoutingModule } from './people-routing.module';
 
 import { PeoplePage } from './people.page';
 import { PersonComponent } from '../../core/components/person/person.component';
-import { PersonDetailComponent } from './person-detail/person-detail.component';
+import { PersonDetailComponent } from '../../core/components/person-detail/person-detail.component';
 import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({

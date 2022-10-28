@@ -54,7 +54,8 @@ export class AssignmentDetailComponent {
   }
 
   onChangeDateTime(dateTime) {
-    this.form.controls.dateTime.setValue(dateTime);
+    console.log(dateTime.detail.value)
+    this.form.controls.dateTime.setValue(dateTime.detail.value);
   }
 
 }
