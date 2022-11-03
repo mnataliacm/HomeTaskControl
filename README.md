@@ -27,6 +27,17 @@ Visualización en la página People de una lista de las personas.
 Implento acciones CRUD para la gestión de Personas.
 
 ### Fase 4 (v4.0)
-La fase 3 pero para la gestión de Tareas.
+CRUD para la gestión de Tareas que añado.
 
+### Fase 5 (v5.0)
+CRUD para la sección de Asignación de tareas que he añadido.
+
+### Fase 6 (v6.0)
+Creo componente para poder elegir una persona de la lista y que funciona en editar.
+
+### Fase 7 (v7.0)
+Duplico componente anterior para elegir una tarea, también en editar.
+
+### Fase 8 (v8.0)
+Añado RxJS para manejar eventos asíncronos
 
