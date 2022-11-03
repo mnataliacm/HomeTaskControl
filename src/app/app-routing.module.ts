@@ -24,8 +24,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/assignments/assignments.module').then( m => m.AssignmentsPageModule)
   },
   {
-    path: 'list',
-    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+    path: 'calendar',
+    loadChildren: () => import('./pages/calendar/calendar.module').then( m => m.CalendarPageModule)
   },
 ];
 
