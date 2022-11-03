@@ -24,5 +24,11 @@ export const LIST_OF_TASKS: Task[] = [
     name:"Ventanas",
     time:150,
     picture:"https://svgsilh.com/svg_v2/1906739.svg"
+  },
+  {
+    id:5,
+    name:"Lavar platos",
+    time:20,
+    picture:"https://cdn.pixabay.com/photo/2014/12/22/00/05/soup-576783_640.png"
   }
 ];
