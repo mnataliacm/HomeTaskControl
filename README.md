@@ -39,5 +39,5 @@ Creo componente para poder elegir una persona de la lista y que funciona en edit
 Duplico componente anterior para elegir una tarea, también en editar.
 
 ### Fase 8 (v8.0)
-Añado RxJS para manejar eventos asíncronos
+Añado RxJS para usar Observables y manejar eventos de manera asíncrona.
 
