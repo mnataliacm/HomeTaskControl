@@ -6,3 +6,4 @@ export * from './assignment/assignment.component';
 export * from './assignment-detail/assignment-detail.component';
 export * from './person-selectable/person-selectable.component';
 export * from './task-selectable/task-selectable.component';
+export * from './date-time-selectable/date-time-selectable.component';

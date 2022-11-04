@@ -21,11 +21,11 @@ export class AssignmentsPage {
     return this.assignService.getAssignment();
   }
 
-  async presentAssignForm(assign:Assign){
+  async presentAssignForm(assign: Assign){
     const modal = await this.modal.create({
       component:AssignmentDetailComponent,
       componentProps:{
-        assign:assign //cambio assign: assign por person:assign
+        assign:assign
       }
     });
     
@@ -73,7 +73,6 @@ export class AssignmentsPage {
         },
       ],
     });
-
     await alert.present();
     const { role } = await alert.onDidDismiss();
   }

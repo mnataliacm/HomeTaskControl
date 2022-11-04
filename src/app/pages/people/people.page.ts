@@ -44,6 +44,7 @@ export class PeoplePage {
       }
     });
   }
+  
   onNewPerson() {
     this.presentPersonForm(null);
   }

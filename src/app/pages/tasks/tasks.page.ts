@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
-import { Task, TaskDetailComponent, TasksService } from 'src/app/core';
+import { Task, TaskDetailComponent, TasksService, AssignmentService } from 'src/app/core';
 
 
 @Component({
@@ -12,12 +12,13 @@ export class TasksPage {
 
   constructor(
     public tasksService: TasksService,
+    private assignmentService: AssignmentService,
     private modal: ModalController,
     private alert: AlertController
   ) { }
 
   getTasks(){
-    return this.tasksService.getTasks();
+    return this.tasksService._tasks$;
   }
 
   async presentTaskForm(task:Task){
@@ -54,7 +55,7 @@ export class TasksPage {
 
   async onDeleteAlert(task){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que quiere borrar a la tarea?',
+      header: '¿Está seguro de que quiere borrar la tarea?',
       buttons: [
         {
           text: 'Cancelar',
@@ -72,13 +73,32 @@ export class TasksPage {
         },
       ],
     });
-
     await alert.present();
     const { role } = await alert.onDidDismiss();
   }
   
+  async onTaskExistsAlert(person) {
+    const alert = await this.alert.create({
+      header: 'ADVERTENCIA',
+      message: 'No se puede borrar esa tarea porque esta asignada',
+      buttons: [
+        {
+          text: 'Cerrar',
+          role: 'close',
+          handler: () => { },
+        },
+      ],
+    });
+    await alert.present();
+    const { role } = await alert.onDidDismiss();
+  }
+
   onDeleteTask(task){
-   this.onDeleteAlert(task);    
+    if (!this.assignmentService.getAssignmentByTaskId(task.id).length) {
+      this.onDeleteAlert(task);
+    } else {
+      this.onTaskExistsAlert(task);
+    }
   }
 
 }

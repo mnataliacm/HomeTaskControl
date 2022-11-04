@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { PersonComponent, PersonDetailComponent, TaskComponent, TaskDetailComponent, AssignmentComponent, AssignmentDetailComponent, PersonSelectableComponent, TaskSelectableComponent } from '.';
+import { PersonComponent, PersonDetailComponent, TaskComponent, TaskDetailComponent, AssignmentComponent, AssignmentDetailComponent, PersonSelectableComponent, TaskSelectableComponent, DateTimeSelectableComponent } from '.';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { PersonComponent, PersonDetailComponent, TaskComponent, TaskDetailCompon
     AssignmentComponent,
     AssignmentDetailComponent,
     PersonSelectableComponent,
-    TaskSelectableComponent
+    TaskSelectableComponent,
+    DateTimeSelectableComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,8 @@ import { PersonComponent, PersonDetailComponent, TaskComponent, TaskDetailCompon
     AssignmentComponent,
     AssignmentDetailComponent,
     PersonSelectableComponent,
-    TaskSelectableComponent
+    TaskSelectableComponent,
+    DateTimeSelectableComponent
   ]
 })
 export class CoreModule { }

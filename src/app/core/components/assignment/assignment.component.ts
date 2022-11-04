@@ -22,7 +22,6 @@ export class AssignmentComponent {
   ) {}
 
   getTask():Task{
-    //console.log(new Date().toISOString());
     var taskId = this.assign.taskId;
     if(taskId)
       return this.tasksService.getTaskById(taskId);
@@ -30,7 +29,6 @@ export class AssignmentComponent {
   }
 
   getPerson():Person{
-    //console.log(new Date().toISOString());
     var personId = this.assign.personId;
     if(personId)
       return this.peopleService.getPersonById(personId);

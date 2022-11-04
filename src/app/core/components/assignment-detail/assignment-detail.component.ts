@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Assign, PeopleService, TasksService, AssignmentService } from '../..';
 

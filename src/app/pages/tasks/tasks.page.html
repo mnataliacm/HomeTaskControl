@@ -11,9 +11,11 @@
 
 <ion-content>
   <ion-list>   
-    <ion-item-sliding *ngFor="let task of getTasks()">
+    <ion-item-sliding *ngFor="let task of getTasks() | async">
 
-       <app-task  [task]="task" (onEdit)="onEditTask($event)" (onDelete)="onDeleteTask($event)">
+       <app-task  [task]="task" 
+        (onEdit)="onEditTask($event)" 
+        (onDelete)="onDeleteTask($event)">
        </app-task>
        
     </ion-item-sliding>  
