@@ -12,7 +12,7 @@ export class TasksService {
 
   private _tasks: Task[] = LIST_OF_TASKS;
   private _tasksSubject: BehaviorSubject<Task[]> = new BehaviorSubject(this._tasks);
-  public _tasks$ = this._tasksSubject.asObservable()
+  public _tasks$ = this._tasksSubject.asObservable();
 
   id: number = this._tasks.length+1;
 

@@ -11,7 +11,7 @@
 
 <ion-content>
   <ion-list>   
-    <ion-item-sliding *ngFor="let task of getTasks() | async">
+    <ion-item-sliding *ngFor="let task of getTasks() | async"> 
 
        <app-task  [task]="task" 
         (onEdit)="onEditTask($event)" 

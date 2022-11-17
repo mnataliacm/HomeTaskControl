@@ -25,6 +25,8 @@
     "@capacitor/keyboard": "4.0.1",
     "@capacitor/status-bar": "4.0.1",
     "@ionic/angular": "^6.1.9",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "@types/moment": "^2.13.0",
     "@types/moment-timezone": "^0.5.30",
     "ionicons": "^6.0.3",
@@ -34,7 +36,7 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^14.0.0",
+    "@angular-devkit/build-angular": "^15.0.0",
     "@angular-eslint/builder": "~13.0.1",
     "@angular-eslint/eslint-plugin": "~13.0.1",
     "@angular-eslint/eslint-plugin-template": "~13.0.1",
@@ -69,4 +71,3 @@
   },
   "description": "An Ionic project"
 }
-
