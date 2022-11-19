@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la tarea</ion-title>
+    <ion-title>{{ 'detail.titleT' | translate }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="onDismiss(null)">Cerrar</ion-button>
+      <ion-button (click)="onDismiss(null)">{{ 'button.close' | translate }}</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -11,22 +11,22 @@
     
     <ion-item>
       <ion-label position="floating">
-        Nombre
+        {{ 'detail.name' | translate }}
       </ion-label>
-      <ion-input type="text" placeholder="Introduce el nombre" formControlName="name"></ion-input>
+      <ion-input type="text" placeholder="{{ 'task.name' | translate }}" formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">
-        Duración
+        {{ 'detail.duration' | translate }}
       </ion-label>
-      <ion-input type="number" placeholder="Introduce la duración" formControlName="time"></ion-input>
+      <ion-input type="number" placeholder="{{ 'task.duration' | translate }}" formControlName="time"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">
-        Imagen
+        {{ 'detail.image' | translate }}
       </ion-label>
-      <ion-input type="text" placeholder="Introduce tu apodo" formControlName="picture"></ion-input>
+      <ion-input type="text" placeholder="{{ 'people.image' | translate }}" formControlName="picture"></ion-input>
     </ion-item>
-    <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+    <ion-button [disabled]="!form.valid" type="submit">{{(mode=="Edit"?"button.edit":"button.new") | translate}}</ion-button>
   </form>
 </ion-content>

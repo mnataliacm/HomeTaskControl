@@ -8,8 +8,6 @@ import { Person } from '..';
 })
 export class PeopleService {
 
-  constructor() { }
-
   private _people: Person[] = LIST_OF_PEOPLE;
   private _peopleSubject: BehaviorSubject<Person[]> = new BehaviorSubject(this._people);
   public _people$ = this._peopleSubject.asObservable()

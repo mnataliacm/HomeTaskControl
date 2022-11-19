@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IonItemSliding } from '@ionic/angular';
-
 import { isLowResolution as lowres} from 'src/app/utils/screen.utils';
 import { Assign, PeopleService, TasksService, Task, Person } from '../..';
 
@@ -18,8 +17,8 @@ export class AssignmentComponent {
 
   constructor(
     private peopleService: PeopleService,
-    private tasksService: TasksService,
-  ) {}
+    private tasksService: TasksService
+  ) { }
 
   getTask():Task{
     var taskId = this.assign.taskId;

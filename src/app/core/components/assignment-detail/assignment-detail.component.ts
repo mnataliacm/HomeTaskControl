@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Assign, PeopleService, TasksService, AssignmentService } from '../..';
 
@@ -30,8 +30,7 @@ export class AssignmentDetailComponent {
     private tasksService: TasksService,
     private assignmentsService: AssignmentService,
     private fb: FormBuilder,
-    private modal: ModalController,
-
+    private modal: ModalController
   ) {
     this.form = this.fb.group({
       id: [null],
@@ -39,6 +38,7 @@ export class AssignmentDetailComponent {
       taskId: [-1, [Validators.min(1)]],
       dateTime: ['', []]
     });
+
   }
 
   onSubmit() {

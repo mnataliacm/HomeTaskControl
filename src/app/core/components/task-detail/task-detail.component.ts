@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalController } from '@ionic/angular';
 import { Task } from 'src/app/core/models/task.model';
@@ -33,6 +33,7 @@ export class TaskDetailComponent {
       time:['', [Validators.required]],
       picture:['']
     });
+
   }
 
   onSubmit(){   
@@ -42,5 +43,4 @@ export class TaskDetailComponent {
   onDismiss(result){
     this.modal.dismiss(null, 'cancel');
   }
-
 }

@@ -1,5 +1,53 @@
 {
   "home": {
-    "title":"Tasks Management"
+    "title":"Tasks Management",
+    "home": "HOME",
+    "people": "PEOPLE",
+    "tasks": "TASKS",
+    "assign": "ASSIGNMENT",
+    "view": "SCHEDULE",
+    "line1": "Add tasks and indicate who and when will perform them.",
+    "line2": "Organize and control housework, work, class,...",
+    "language": "Change language: ",
+    "spa": "spain flag icon",
+    "eng": "united kingdom flag icon"
+  },
+  "detail": {
+    "titleP": "Personal data",
+    "titleT": "Task data",
+    "titleA": "Task assignment",
+    "name": "Name",
+    "surname": "Surname",
+    "nickname": "Nickname",
+    "image": "Image",
+    "duration": "Duration"
+  },
+  "people": {
+    "name": "Enter your name ...",
+    "surname": "Enter your surname ...",
+    "nickname": "Enter your nickname ...",
+    "image": "Enter link to image ..."
+  },
+  "task": {
+    "name": "Enter task name ...",
+    "duration": "Enter task duration ...",
+    "task1": "Sweeping and scrubbing",
+    "task2": "Washing machine",
+    "taks3": "Ironing clothes",
+    "taks4": "Clean windows",
+    "task5": "Washing dishes"
+  },
+  "assign": {
+    "person": "Select person ",
+    "task": "Select task ",
+    "date": "Select date and time"
+  },
+  "button": {
+    "new": "CREATE",
+    "edit": "EDIT",
+    "delete": "DELETE",
+    "close": "CLOSE",
+    "cancel": "CANCEL",
+    "apply": "APPLY"
   }
 }

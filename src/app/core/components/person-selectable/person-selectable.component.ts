@@ -1,4 +1,4 @@
-import { Component, forwardRef, OnInit } from '@angular/core';
+import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
 import { PeopleService, Person } from '../..';
@@ -15,14 +15,12 @@ export const USER_PROFILE_VALUE_ACCESSOR: any = {
   styleUrls: ['./person-selectable.component.scss'],
   providers: [USER_PROFILE_VALUE_ACCESSOR]
 })
-export class PersonSelectableComponent implements OnInit, ControlValueAccessor {
+export class PersonSelectableComponent implements ControlValueAccessor {
   selectedPerson: Person = null;
   propagateChange = (_: any) => { }
   isDisabled:boolean = false;
 
-  constructor(
-    private peopleService: PeopleService
-  ) { }
+  constructor(private peopleService: PeopleService) { }
 
   writeValue(obj: any): void {
     this.selectedPerson = this.peopleService.getPersonById(obj);
@@ -38,8 +36,6 @@ export class PersonSelectableComponent implements OnInit, ControlValueAccessor {
   setDisabledState?(isDisabled: boolean): void {
     this.isDisabled = isDisabled;
   }
-
-  ngOnInit() {}
 
   getPeople() {
     return this.peopleService.getPeople();

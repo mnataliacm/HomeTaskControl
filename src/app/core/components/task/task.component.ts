@@ -24,5 +24,4 @@ export class TaskComponent {
     slide.close();
     this.onDelete.emit(this.task);
   }
-
 }

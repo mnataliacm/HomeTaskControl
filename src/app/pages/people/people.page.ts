@@ -14,8 +14,10 @@ export class PeoplePage {
     private peopleService: PeopleService,
     private assignmentService: AssignmentService,
     private modal: ModalController,
-    private alert: AlertController
-  ) { }
+    private alert: AlertController,
+  
+    ) {    
+    }
 
   getPeople() {
     return this.peopleService._people$;
@@ -76,6 +78,7 @@ export class PeoplePage {
       await alert.present();
       const { role } = await alert.onDidDismiss();
   }
+  
 
   async onPersonExistsAlert(task) {
     const alert = await this.alert.create({

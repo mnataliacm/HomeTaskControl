@@ -11,7 +11,7 @@
     <ion-button class="item-expanded" *ngIf="!isLowResolution()" slot="end" fill="clear" (click)="onEditClick(sliding)">
       <div class="vertical">
         <ion-icon name="pencil"></ion-icon>
-        {{'Editar' | uppercase}}
+        {{ 'button.edit' | translate }}
       </div>
     </ion-button>
 
@@ -19,7 +19,7 @@
       (click)="onDeleteClick(sliding)">
       <div class="vertical">
         <ion-icon name="trash"></ion-icon>
-        {{'Borrar' | uppercase}}
+        {{ 'button.delete' | translate }}
       </div>
     </ion-button>
   </ion-item>

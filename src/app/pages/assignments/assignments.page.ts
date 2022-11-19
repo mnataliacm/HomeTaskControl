@@ -15,7 +15,7 @@ export class AssignmentsPage {
     private assignService: AssignmentService,
     private modal: ModalController,
     private alert:AlertController,
-  ) { }
+    ) { }
 
   getAssignment(){
     return this.assignService.getAssignment();

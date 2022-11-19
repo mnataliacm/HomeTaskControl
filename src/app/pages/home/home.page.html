@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <div id="nav-pages">
-      <ion-title>HOME</ion-title>
+      <ion-title>{{ 'home.home' | translate }}</ion-title>
     </div>
   </ion-toolbar>
 </ion-header>
@@ -17,14 +17,14 @@
           <ion-card>
             <ion-card-header color="medium">
               <ion-item>
-                <ion-title><strong>TASK CONTROL</strong></ion-title>
+                <ion-title><strong>{{ 'home.title' | translate }}</strong></ion-title>
               </ion-item>
               <hr>
               <ion-item>
-                <h6>* Add people and tasks assign</h6>
+                <h6>* {{ 'home.line1' | translate }}</h6>
               </ion-item>
               <ion-item>
-                <h6>* Organize and control the tasks of the house, class,...</h6>
+                <h6>* {{ 'home.line2' | translate }}</h6>
               </ion-item>
             </ion-card-header>
           </ion-card>
@@ -36,7 +36,7 @@
             <ion-item [routerDirection]="'root'" [routerLink]="'/people'">
               <ion-card-content>
                 <ion-icon name="people-circle-outline" color="primary"></ion-icon>
-                <h3>MANAGE PEOPLE</h3>
+                <h3>{{ 'home.people' | translate }}</h3>
               </ion-card-content>
             </ion-item>
           </ion-card-header>
@@ -46,7 +46,7 @@
             <ion-item [routerDirection]="'root'" [routerLink]="'/tasks'">
               <ion-card-content>
                 <ion-icon name="checkbox-outline" color="success"></ion-icon>
-                <h3>MANAGE TASKS</h3>
+                <h3>{{ 'home.tasks' | translate }}</h3>
               </ion-card-content>
             </ion-item>
           </ion-card-header>
@@ -56,7 +56,7 @@
             <ion-item [routerDirection]="'root'" [routerLink]="'/assign'">
               <ion-card-content>
                 <ion-icon name="list-circle-outline" color="danger"></ion-icon>
-                <h3>TASKS ASSIGN</h3>
+                <h3>{{ 'home.assign' | translate }}</h3>
               </ion-card-content>
             </ion-item>
           </ion-card-header>
@@ -66,7 +66,7 @@
             <ion-item [routerDirection]="'root'" [routerLink]="'/list'">
               <ion-card-content>
                 <ion-icon name="calendar-outline" color="warning"></ion-icon>
-                <h3>CONTROL</h3>
+                <h3>{{ 'home.view' | translate }}</h3>
                 <br>
               </ion-card-content>
             </ion-item>

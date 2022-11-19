@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Datos de la persona</ion-title>
+    <ion-title>{{ 'detail.titleP' | translate }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="onDismiss(null)">Cerrar</ion-button>
+      <ion-button (click)="onDismiss(null)">{{ 'button.close' | translate }}</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -12,30 +12,30 @@
 
     <ion-item>
       <ion-label position="floating">
-        Nombre
+        {{ 'detail.name' | translate }}
       </ion-label>
-      <ion-input type="text" placeholder="Introduce tu nombre" formControlName="name"></ion-input>
+      <ion-input type="text" placeholder="{{ 'people.name' | translate }}" formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">
-        Apellidos
+        {{ 'detail.surname' | translate }}
       </ion-label>
-      <ion-input type="text" placeholder="Introduce tus apellidos" formControlName="surname"></ion-input>
+      <ion-input type="text" placeholder="{{ 'people.surname' | translate }}" formControlName="surname"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">
-        Nickname
+        {{ 'detail.nickname' | translate }}
       </ion-label>
-      <ion-input type="text" placeholder="Introduce tu apodo" formControlName="nickname"></ion-input>
+      <ion-input type="text" placeholder="{{ 'people.nickname' | translate }}" formControlName="nickname"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">
-        Picture
+        {{ 'detail.image' | translate }}
       </ion-label>
-      <ion-input type="text" placeholder="Introduce el enlace a tu foto" formControlName="picture"></ion-input>
+      <ion-input type="text" placeholder="{{ 'people.image' | translate }}" formControlName="picture"></ion-input>
     </ion-item>
     <ion-title>
-      <ion-button [disabled]="!form.valid" type="submit">{{mode=="Edit"?"Modificar":"Añadir"}}</ion-button>
+      <ion-button [disabled]="!form.valid" type="submit">{{(mode=="Edit"?"button.edit":"button.new") | translate}}</ion-button>
     </ion-title> 
       
   </form>

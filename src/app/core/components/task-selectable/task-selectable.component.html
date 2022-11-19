@@ -9,7 +9,7 @@
       </ion-avatar>
       <ion-label>{{selectedTask?.name}}</ion-label>
     </ng-container>
-    <ion-label *ngIf="!selectedTask">Selecciona una tarea:</ion-label>
+    <ion-label *ngIf="!selectedTask">{{ 'assign.task' | translate }}</ion-label>
     </ion-item>
     <div class="ion-padding" slot="content">
       <ion-list>

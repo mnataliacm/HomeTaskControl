@@ -1,4 +1,4 @@
-import { Component, forwardRef, OnInit } from '@angular/core';
+import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { IonAccordionGroup } from '@ionic/angular';
 import { Task, TasksService } from '../..';
@@ -15,15 +15,13 @@ export const TASK_PROFILE_VALUE_ACCESSOR: any = {
   styleUrls: ['./task-selectable.component.scss'],
   providers: [TASK_PROFILE_VALUE_ACCESSOR]
 })
-export class TaskSelectableComponent implements OnInit, ControlValueAccessor {
+export class TaskSelectableComponent implements ControlValueAccessor {
 
   selectedTask: Task = null;
   propagateChange = (_: any) => { }
   isDisabled:boolean = false;
 
-  constructor(
-    private tasksService: TasksService
-  ) { }
+  constructor(private tasksService: TasksService) { }
 
   writeValue(obj: any): void {
     this.selectedTask = this.tasksService.getTaskById(obj);;
@@ -37,8 +35,6 @@ export class TaskSelectableComponent implements OnInit, ControlValueAccessor {
   setDisabledState?(isDisabled: boolean): void {
     this.isDisabled = isDisabled;
   }
-
-  ngOnInit() {}
 
   getTasks() {
     return this.tasksService.getTasks();

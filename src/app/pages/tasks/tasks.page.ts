@@ -14,8 +14,8 @@ export class TasksPage {
     public tasksService: TasksService,
     private assignmentService: AssignmentService,
     private modal: ModalController,
-    private alert: AlertController
-  ) { }
+    private alert: AlertController,
+    ) { }
 
   getTasks(){
     return this.tasksService._tasks$;

@@ -1,5 +1,53 @@
 {
   "home": {
-    "title":"Control de Tareas"
+    "title":"Controla las Tareas",
+    "home": "INICIO",
+    "people": "PERSONAS",
+    "tasks": "TAREAS",
+    "assign": "ASIGNAR TAREAS",
+    "view": "HORARIO",
+    "line1": "Añade tareas e indica quien y cuando las realizará.",
+    "line2": "Organiza y controla las tareas de casa, trabajo, clase, ...",
+    "language": "Elige idioma: ",
+    "spa": "icono bandera españa",
+    "eng": "icono bandera reino unido"
+  },
+  "detail": {
+    "titleP": "Datos de la persona",
+    "titleT": "Datos de la tarea",
+    "titleA": "Asignar tareas",
+    "name": "Nombre",
+    "surname": "Apellidos",
+    "nickname": "Apodo",
+    "image": "Imagen",
+    "duration": "Duración"
+  },
+  "people": {
+    "name": "Introduce tu nombre ...",
+    "surname": "Introduce tus apellidos ...",
+    "nickname": "Introduce tu apodo ...",
+    "image": "Introduce enlace a imagen ..."
+  },
+  "task": {
+    "name": "Introduce el nombre de la tarea ...",
+    "duration": "Introduce duración de la tarea ...",
+    "task1": "Barrer y fregar",
+    "task2": "Lavadora",
+    "taks3": "Planchar la ropa",
+    "taks4": "Limpiar ventanas",
+    "task5": "Lavar los platos"
+  },
+  "assign": {
+    "person": "Selecciona la persona ",
+    "task": "Selecciona la tarea ",
+    "date": "Selecciona fecha y hora"
+  },
+  "button": {
+    "new": "CREAR",
+    "edit": "EDITAR",
+    "delete": "BORRAR",
+    "close": "CERRAR",
+    "cancel": "CANCELAR",
+    "apply": "ACEPTAR"
   }
 }
