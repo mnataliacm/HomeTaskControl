@@ -47,6 +47,5 @@ Implemento el servicio de traducción español/ingles.
 
 ---
 ### EXTRAS
-Añado Alert que avise antes de borrar elementos.
-Añado Advertencia que avisa de que no se puede borrar ni una persona que tiene una tarea asignada
+Añado Alert para que avise antes de borrar elementos y advertencia que avisa de que no se puede borrar ni una persona que tiene una tarea asignada
 ni una tarea que ha sido asignada.
