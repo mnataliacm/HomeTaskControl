@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 import { Task, TaskDetailComponent, TasksService, AssignmentService } from 'src/app/core';
 
 
@@ -15,6 +17,7 @@ export class TasksPage {
     private assignmentService: AssignmentService,
     private modal: ModalController,
     private alert: AlertController,
+    private translate: TranslateService
     ) { }
 
   getTasks(){
@@ -55,17 +58,17 @@ export class TasksPage {
 
   async onDeleteAlert(task){
     const alert = await this.alert.create({
-      header: '¿Está seguro de que quiere borrar la tarea?',
+      header: await lastValueFrom(this.translate.get('task.alert')),
       buttons: [
         {
-          text: 'Cancelar',
+          text: await lastValueFrom(this.translate.get('button.cancel')),
           role: 'cancel',
           handler: () => {
             console.log("Operacion cancelada");
           },
         },
         {
-          text: 'Borrar',
+          text: await lastValueFrom(this.translate.get('button.delete')),
           role: 'confirm',
           handler: () => {
             this.tasksService.deleteTaskById(task.id);
@@ -79,11 +82,11 @@ export class TasksPage {
   
   async onTaskExistsAlert(person) {
     const alert = await this.alert.create({
-      header: 'ADVERTENCIA',
-      message: 'No se puede borrar esa tarea porque esta asignada',
+      header: await lastValueFrom(this.translate.get('detail.warning')),
+      message: await lastValueFrom(this.translate.get('task.warning')),
       buttons: [
         {
-          text: 'Cerrar',
+          text: await lastValueFrom(this.translate.get('button.close')),
           role: 'close',
           handler: () => { },
         },

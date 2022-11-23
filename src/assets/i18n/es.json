@@ -20,16 +20,16 @@
     "surname": "Apellidos",
     "nickname": "Apodo",
     "image": "Imagen",
-    "duration": "Duración"
+    "duration": "Duración",
+    "warning": "Advertencia"
   },
   "people": {
     "name": "Introduce tu nombre ...",
     "surname": "Introduce tus apellidos ...",
     "nickname": "Introduce tu apodo ...",
     "image": "Introduce enlace a imagen ...",
-    "alert": "¿Estas seguro de que desea borrar a la persona?",
-    "warning": "Advertencia",
-    "txtWarning": "No se puede borrar a esa persona porque tiene asignada una tarea"
+    "alert": "¿Estas seguro de que desea borrar esta persona?",
+    "warning": "No se puede borrar a esa persona porque tiene asignada una tarea"
   },
   "task": {
     "name": "Introduce el nombre de la tarea ...",
@@ -38,7 +38,9 @@
     "task2": "Lavadora",
     "taks3": "Planchar la ropa",
     "taks4": "Limpiar ventanas",
-    "task5": "Lavar los platos"
+    "task5": "Lavar los platos",
+    "alert": "¿Estas seguro de que desea borrar esta tarea?",
+    "warning": "No se puede borrar esta tarea porque está asignada"
   },
   "assign": {
     "person": "Selecciona la persona ",

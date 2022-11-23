@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { lastValueFrom } from 'rxjs';
 import { AssignmentService, PeopleService, Person, PersonDetailComponent } from 'src/app/core';
 
 
@@ -15,7 +17,7 @@ export class PeoplePage {
     private assignmentService: AssignmentService,
     private modal: ModalController,
     private alert: AlertController,
-  
+    private translate: TranslateService
     ) {    
     }
 
@@ -57,17 +59,17 @@ export class PeoplePage {
 
   async onDeleteAlert(person) {
       const alert = await this.alert.create({
-        header: '¿Está seguro de que desea borrar a la persona?',
+        header: await lastValueFrom(this.translate.get('people.alert')),
         buttons: [
           {
-            text: 'Cancelar',
+            text: await lastValueFrom(this.translate.get('button.cancel')),
             role: 'cancel',
             handler: () => {
               console.log("Operacion cancelada");
             },
           },
           {
-            text: 'Borrar',
+            text: await lastValueFrom(this.translate.get('button.delete')),
             role: 'confirm',
             handler: () => {
               this.peopleService.deletePersonById(person.id);
@@ -82,11 +84,11 @@ export class PeoplePage {
 
   async onPersonExistsAlert(task) {
     const alert = await this.alert.create({
-      header: 'ADVERTENCIA',
-      message: 'No se puede borrar esa persona porque tiene asignada una tarea',
+      header: await lastValueFrom(this.translate.get('detail.warning')),
+      message: await lastValueFrom(this.translate.get('people.warning')),
       buttons: [
         {
-          text: 'Cerrar',
+          text: await lastValueFrom(this.translate.get('button.close')),
           role: 'close',
           handler: () => { },
         },

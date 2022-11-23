@@ -1,10 +1,9 @@
 import { Task } from "src/app/core/models/task.model";
-import { TranslateService } from '@ngx-translate/core';
 
 export const LIST_OF_TASKS: Task[] = [
   {
     id:1,
-    name: "{{ task.task1 | translate }}",
+    name: "Barrer y Fregar",
     time:30,
     picture:"https://svgsilh.com/svg/1294960-009688.svg"
   },

@@ -20,7 +20,8 @@
     "surname": "Surname",
     "nickname": "Nickname",
     "image": "Image",
-    "duration": "Duration"
+    "duration": "Duration",
+    "warning": "Warning"
   },
   "people": {
     "name": "Enter your name ...",
@@ -28,7 +29,6 @@
     "nickname": "Enter your nickname ...",
     "image": "Enter link to image ...",
     "alert": "Are you sure you want to delete the person?",
-    "warning": "Warning",
     "txtWarning": "That person cannot be deleted because they are assigned a task"
   },
   "task": {
@@ -38,7 +38,9 @@
     "task2": "Washing machine",
     "taks3": "Ironing clothes",
     "taks4": "Clean windows",
-    "task5": "Washing dishes"
+    "task5": "Washing dishes",
+    "alert": "Are you sure you want to delete this task?",
+    "warning": "You cannot delete this task because it is assigned"
   },
   "assign": {
     "person": "Select person ",
