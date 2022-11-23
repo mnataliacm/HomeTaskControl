@@ -41,3 +41,5 @@ Duplico componente anterior para elegir una tarea, también en editar.
 ### Fase 8 (v8.0)
 Añado RxJS para usar Observables y manejar eventos de manera asíncrona.
 
+### Fase 9 (v9.0)
+Implemento el servicio de traducción español/ingles.
