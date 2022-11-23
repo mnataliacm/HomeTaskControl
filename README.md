@@ -33,13 +33,20 @@ CRUD para la gestión de Tareas que añado.
 CRUD para la sección de Asignación de tareas que he añadido.
 
 ### Fase 6 (v6.0)
-Creo componente para poder elegir una persona de la lista y que funciona en editar.
+Creo componente para poder elegir una persona de la lista y los datos aparecen al editar.
 
 ### Fase 7 (v7.0)
-Duplico componente anterior para elegir una tarea, también en editar.
+Duplico componente anterior para elegir una tarea y editarla.
 
 ### Fase 8 (v8.0)
 Añado RxJS para usar Observables y manejar eventos de manera asíncrona.
 
+
 ### Fase 9 (v9.0)
 Implemento el servicio de traducción español/ingles.
+
+---
+### EXTRAS
+Añado Alert que avise antes de borrar elementos.
+Añado Advertencia que avisa de que no se puede borrar ni una persona que tiene una tarea asignada
+ni una tarea que ha sido asignada.
