@@ -26,7 +26,10 @@
     "name": "Enter your name ...",
     "surname": "Enter your surname ...",
     "nickname": "Enter your nickname ...",
-    "image": "Enter link to image ..."
+    "image": "Enter link to image ...",
+    "alert": "Are you sure you want to delete the person?",
+    "warning": "Warning",
+    "txtWarning": "That person cannot be deleted because they are assigned a task"
   },
   "task": {
     "name": "Enter task name ...",

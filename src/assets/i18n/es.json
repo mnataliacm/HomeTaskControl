@@ -26,7 +26,10 @@
     "name": "Introduce tu nombre ...",
     "surname": "Introduce tus apellidos ...",
     "nickname": "Introduce tu apodo ...",
-    "image": "Introduce enlace a imagen ..."
+    "image": "Introduce enlace a imagen ...",
+    "alert": "¿Estas seguro de que desea borrar a la persona?",
+    "warning": "Advertencia",
+    "txtWarning": "No se puede borrar a esa persona porque tiene asignada una tarea"
   },
   "task": {
     "name": "Introduce el nombre de la tarea ...",
